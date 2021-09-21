@@ -1,0 +1,85 @@
+<head>
+    <meta charset="UTF-8"/>
+    <title>河南农业大学我爱你</title>
+    <link rel="icon" type="" href="icon.webp" />
+    <body bgcolor="#007A44">
+    <div style="background-color:#007A44;">
+    <style type="text/css">
+        #div1{
+            width: 400px;
+            height: 0px;
+            border: #000 solid 0px;
+            margin: 85px auto;
+            overflow: visible;
+        }
+        #div1 img{
+            cursor: pointer;
+            transition: all 0.6s;
+        }
+        #div1 img:hover{
+            transform: scale(1.15);
+        }
+    </style>
+    <body>
+        <div id="div1">
+            <center><a target=_blank href="http://www.henau.edu.cn"><img src="badge.webp"></a></center>
+        </div>
+    </body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center><img src="sentences.webp"></center>
+    <br>
+    <br>
+    <center><font color="white">建议浏览器&emsp;<a href="https://www.google.com/chrome" target="_blank" style="color:white">Google Chrome</a>&emsp;<a href="https://www.mozilla.org/firefox" target="_blank" style="color:white">Mozilla Firefox</a></font></center>
+    <br>
+    <br>    
+    <br>
+    </div>
+    </body>
+</head>
+<script>
+    (function() {
+        var coreSocialistValues = ["明德", "自强", "求是", "力行", "弘农", "爱国", "求真", "创新", "厚德", "质朴", "包容", "奋进"]
+          , index = Math.floor(Math.random() * coreSocialistValues.length);
+        document.body.addEventListener('click', function(e) {
+            if (e.target.tagName == 'A') {
+                return;
+            }
+            var x = e.pageX
+              , y = e.pageY
+              , span = document.createElement('span');
+            span.textContent = coreSocialistValues[index];
+            index = (index + 1) % coreSocialistValues.length;//取模循环
+            span.style.cssText = ['z-index: 9999999; position: absolute; font-weight: bold; color: #ffff00; top: ', y - 20, 'px; left: ', x, 'px;'].join('');
+            document.body.appendChild(span);
+            animate(span);
+        });
+        function animate(el) {//动画
+            var i = 0
+              , top = parseInt(el.style.top)
+              , id = setInterval(frame, 24);
+            function frame() {//帧
+                if (i > 180) {
+                    clearInterval(id);
+                    el.parentNode.removeChild(el);
+                } else {
+                    i += 2;
+                    el.style.top = top - i + 'px';
+                    el.style.opacity = (180 - i) / 180;
+                }
+            }
+        }
+    }());
+</script>
